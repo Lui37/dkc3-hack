@@ -10,4 +10,7 @@ incsrc "defines.asm"
 incsrc "edits.asm"
 incsrc "hijacks.asm"
 
-
+org freerom_B3
+incsrc "every_frame.asm"
+incsrc "map.asm"
+incsrc "hud.asm"
