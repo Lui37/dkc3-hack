@@ -31,7 +31,7 @@ endif
 !timer_y = $0900
 
 ; wram
-!freeram = $1E00
+!freeram = $1E30
 
 !fade_type = $04ED
 
