@@ -3,7 +3,7 @@
 handle_displays:
 		SEP #$20
 		LDA !timer_started
-		BNE .active
+		BRA .active
 		LDA !fade_type
 		BEQ .start
 		; ignore frames elapsed before taking control at the start of a level
