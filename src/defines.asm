@@ -22,7 +22,7 @@ endif
 ; wram
 !freeram = $1E00
 
-!fade_type = $04EE
+!fade_type = $04ED
 !level_state = $05AF
 
 !counter_60hz = $5A

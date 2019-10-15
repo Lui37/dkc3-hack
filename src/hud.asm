@@ -46,7 +46,7 @@ handle_displays:
 		LDX #!timer_x
 		; starting y position
 		LDA #!timer_y
-		STA $32
+		STA $1A
 		
 		LDA !timer_minutes
 		AND #$00FF
@@ -157,7 +157,7 @@ draw_dropped_frames:
 
 		; starting y position
 		LDX #!dropped_frames_y
-		STX $32
+		STX $1A
 		; starting x position
 		LDX #!dropped_frames_x
 		
@@ -175,7 +175,7 @@ draw_dropped_frames:
 		LDX #!dropped_frames_x
 		; starting y position
 		LDA #!dropped_frames_y
-		STA $32
+		STA $1A
 		NOP #2
 		; hundreds
 		LDA $4214

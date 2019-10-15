@@ -10,6 +10,7 @@ every_frame:
 		STA !real_frames_elapsed
 		TYA
 		DEC
+		BMI .end
 		CLC
 		ADC !dropped_frames
 		STA !dropped_frames
