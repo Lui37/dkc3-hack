@@ -46,6 +46,5 @@ endif
 !timer_minutes = !freeram+10
 
 !timer_stopped = !freeram+12
-!timer_started = !freeram+13
 
 !goal_flag = !freeram+14

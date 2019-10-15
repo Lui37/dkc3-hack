@@ -2,20 +2,6 @@
 
 handle_displays:
 		SEP #$20
-		LDA !timer_started
-		BRA .active
-		LDA !fade_type
-		BEQ .start
-		; ignore frames elapsed before taking control at the start of a level
-		STZ !real_frames_elapsed
-		STZ !real_frames_elapsed+1
-		BRA .draw
-		
-	.start:
-		INC !timer_started
-		BRA .update
-		
-	.active:
 		LDA !fade_type
 		BMI .skip_update
 		LDA !timer_stopped
