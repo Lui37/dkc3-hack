@@ -3,17 +3,27 @@
 ; define rom locations based on rom revision
 if !rom_revision == 0
 	hijack_every_frame = $808389
-	freerom_B3 = $B3F957
+	freerom = $B3F957
 	hijack_map = $B4B293
 	hijack_goal = $B8ABE3
 	hijack_lives = $BBB16C
 	end_bananas = $BBB310
 elseif !rom_revision == 1
-
+	hijack_every_frame = $808378
+	freerom = $B3F957
+	hijack_map = $B4B17B
+	hijack_goal = $B8AC02
+	hijack_lives = $BBB17E
+	end_bananas = $BBB322
 elseif !rom_revision == 2
-
+	hijack_every_frame = $808378
+	freerom = $B9F907
+	hijack_map = $B4B189
+	hijack_goal = $B8AC15
+	hijack_lives = $BBB17E
+	end_bananas = $BBB322
 endif
-	
+
 ; constants
 !dropped_frames_x = $0008
 !dropped_frames_y = $0900
