@@ -12,5 +12,6 @@ incsrc "hijacks.asm"
 
 org freerom_B3
 incsrc "every_frame.asm"
+incsrc "level.asm"
 incsrc "map.asm"
 incsrc "hud.asm"

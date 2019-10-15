@@ -27,8 +27,8 @@ handle_displays:
 	.skip_update:
 		; checking here lets the timer tick on the first frame you hit the goal
 		; to properly account for lag frames
-		LDA !level_state
-		CMP #$A0
+		LDA !goal_flag
+		CMP #$40
 		BNE +
 		INC !timer_stopped
 	+

@@ -5,6 +5,7 @@ if !rom_revision == 0
 	hijack_every_frame = $808389
 	freerom_B3 = $B3F957
 	hijack_map = $B4B293
+	hijack_goal = $B8ABE3
 	hijack_lives = $BBB16C
 	end_bananas = $BBB310
 elseif !rom_revision == 1
@@ -23,7 +24,6 @@ endif
 !freeram = $1E00
 
 !fade_type = $04ED
-!level_state = $05AF
 
 !counter_60hz = $5A
 !previous_60hz = !freeram+0
@@ -37,3 +37,5 @@ endif
 
 !timer_stopped = !freeram+12
 !timer_started = !freeram+13
+
+!goal_flag = !freeram+14

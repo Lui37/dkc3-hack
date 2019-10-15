@@ -7,6 +7,7 @@ every_map_frame:
 		STZ !timer_seconds
 		STZ !timer_minutes
 		STZ !timer_stopped
+		STZ !goal_flag
 		LDA !counter_60hz
 		STA !previous_60hz
 		LDA $04EC

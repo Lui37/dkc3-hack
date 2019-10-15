@@ -15,3 +15,6 @@ org hijack_lives
 		JSL handle_displays
 		RTS
 		
+org hijack_goal
+		JSL on_goal
+		
