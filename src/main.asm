@@ -15,3 +15,5 @@ incsrc "every_frame.asm"
 incsrc "level.asm"
 incsrc "map.asm"
 incsrc "hud.asm"
+
+warnpc freerom|$FFFF

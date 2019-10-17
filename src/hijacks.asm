@@ -3,6 +3,9 @@
 org hijack_every_frame
 		JSL every_frame
 		
+org hijack_level
+		JSL every_igt_frame
+		
 org hijack_map
 		JSR hijack_map_jump
 		

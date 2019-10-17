@@ -3,6 +3,7 @@
 ; define rom locations based on rom revision
 if !rom_revision == 0
 	hijack_every_frame = $808389
+	hijack_level = $808353
 	freerom = $B3F957
 	hijack_map = $B4B293
 	hijack_goal = $B8ABE3
@@ -10,6 +11,7 @@ if !rom_revision == 0
 	end_bananas = $BBB310
 elseif !rom_revision == 1
 	hijack_every_frame = $808378
+	hijack_level = $808342
 	freerom = $B3F957
 	hijack_map = $B4B17B
 	hijack_goal = $B8AC02
@@ -17,6 +19,7 @@ elseif !rom_revision == 1
 	end_bananas = $BBB322
 elseif !rom_revision == 2
 	hijack_every_frame = $808378
+	hijack_level = $808342
 	freerom = $B9F907
 	hijack_map = $B4B189
 	hijack_goal = $B8AC15
@@ -33,18 +36,33 @@ endif
 ; wram
 !freeram = $1E30
 
+!freeram_used = 0
+macro def_freeram(id, size)
+	!<id> := !freeram+!freeram_used
+	!freeram_used #= !freeram_used+<size>
+endmacro
+
 !fade_type = $04ED
+!pause_flags = $05AF
 
 !counter_60hz = $5A
-!previous_60hz = !freeram+0
 
-!dropped_frames = !freeram+2
-!real_frames_elapsed = !freeram+4
+%def_freeram(previous_60hz, 2)
 
-!timer_frames = !freeram+6
-!timer_seconds = !freeram+8
-!timer_minutes = !freeram+10
+%def_freeram(dropped_frames, 2)
+%def_freeram(real_frames_elapsed, 2)
 
-!timer_stopped = !freeram+12
+%def_freeram(timer_frames, 2)
+%def_freeram(timer_seconds, 2)
+%def_freeram(timer_minutes, 2)
 
-!goal_flag = !freeram+14
+%def_freeram(timer_disp_frames, 2)
+%def_freeram(timer_disp_seconds, 2)
+%def_freeram(timer_disp_minutes, 2)
+
+%def_freeram(timer_stopped, 2)
+
+%def_freeram(goal_flag, 2)
+
+
+assert !freeram+!freeram_used < $2000, "exceeded freeram area"
