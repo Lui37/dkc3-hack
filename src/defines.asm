@@ -4,6 +4,7 @@
 if !rom_revision == 0
 	hijack_every_frame = $808389
 	hijack_level = $808353
+	hijack_bonus_intro = $808379
 	freerom = $B3F957
 	hijack_map = $B4B293
 	hijack_goal = $B8ABE3
@@ -12,6 +13,7 @@ if !rom_revision == 0
 elseif !rom_revision == 1
 	hijack_every_frame = $808378
 	hijack_level = $808342
+	hijack_bonus_intro = $808368
 	freerom = $B3F957
 	hijack_map = $B4B17B
 	hijack_goal = $B8AC02
@@ -20,6 +22,7 @@ elseif !rom_revision == 1
 elseif !rom_revision == 2
 	hijack_every_frame = $808378
 	hijack_level = $808342
+	hijack_bonus_intro = $808368
 	freerom = $B9F907
 	hijack_map = $B4B189
 	hijack_goal = $B8AC23

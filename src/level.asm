@@ -11,6 +11,15 @@ every_igt_frame:
 		INC $C2
 		RTL
 		
+		
+; bonus intro
+every_intermission_frame:
+		JSR tick_timer
+		INC $00
+		INC $F4
+		RTL
+		
+		
 tick_timer:
 		; decimal mode
 		SEP #$28
