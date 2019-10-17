@@ -22,7 +22,7 @@ elseif !rom_revision == 2
 	hijack_level = $808342
 	freerom = $B9F907
 	hijack_map = $B4B189
-	hijack_goal = $B8AC15
+	hijack_goal = $B8AC23
 	hijack_lives = $BBB17E
 	end_bananas = $BBB322
 endif
