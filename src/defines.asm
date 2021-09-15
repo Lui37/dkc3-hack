@@ -46,7 +46,12 @@ macro def_freeram(id, size)
 endmacro
 
 !fade_type = $04ED
-!pause_flags = $05AF
+
+if !rom_revision == 0
+	!pause_flags = $05AF
+else
+	!pause_flags = $05B5
+endif
 
 !counter_60hz = $5A
 
